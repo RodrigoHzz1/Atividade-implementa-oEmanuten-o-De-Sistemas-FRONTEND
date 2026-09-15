@@ -1,0 +1,50 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: #0d1117;
+  border-bottom: 1px solid #1f2937;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column; /* Coloca o nome em cima e o cargo embaixo */
+  align-items: flex-end;   /* Alinha o texto à direita */
+  line-height: 1.2;
+}
+
+.user-name {
+  color: #f3f4f6;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.user-role {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.logout-btn {
+  background-color: transparent;
+  color: #e5e7eb;
+  border: 1px solid #374151;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #1f2937;
+  color: #ef4444;
+  border-color: #ef4444;
+}

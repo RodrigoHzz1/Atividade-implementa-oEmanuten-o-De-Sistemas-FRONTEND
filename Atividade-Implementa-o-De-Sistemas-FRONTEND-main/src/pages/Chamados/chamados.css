@@ -1,0 +1,35 @@
+.table-wrapper {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #1e293b;
+}
+
+.custom-table th {
+  background: #0b0f19;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.custom-table td {
+  color: #cbd5e1;
+}
+
+.custom-table tbody tr:hover {
+  background: #1e293b;
+}

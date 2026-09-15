@@ -1,0 +1,40 @@
+.app-sidebar {
+  width: 240px;
+  background: #0b0f19;
+  border-right: 1px solid #1e293b;
+  height: 100%;
+  padding: 1.5rem 1rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #94a3b8;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar-link:hover {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+.sidebar-link.active {
+  background: rgba(168, 85, 247, 0.15);
+  color: #a855f7;
+  border-left: 3px solid #a855f7;
+}

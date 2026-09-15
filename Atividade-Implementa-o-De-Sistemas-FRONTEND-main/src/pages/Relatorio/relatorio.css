@@ -1,0 +1,237 @@
+.relatorio-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #050812;
+  color: #f1f5f9;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.relatorio-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.relatorio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.relatorio-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0.75rem 0 0.35rem 0;
+}
+
+.relatorio-header p {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.btn-voltar {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid #1e293b;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-voltar:hover {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+.relatorio-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.select-filtro {
+  background: #0b0f19;
+  border: 1px solid #1e293b;
+  color: #f1f5f9;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #8b5cf6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #7c3aed;
+}
+
+/* KPIs */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.kpi-card {
+  background: #0b0f19;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.kpi-label {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.kpi-body {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.kpi-valor {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.kpi-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.kpi-tag.positivo {
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+}
+
+.kpi-tag.negativo {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+}
+
+.kpi-tag.neutro {
+  background: rgba(148, 163, 184, 0.15);
+  color: #cbd5e1;
+}
+
+/* Tabela de desempenho */
+.relatorio-section h2 {
+  font-size: 1.15rem;
+  color: #f8fafc;
+  margin-bottom: 0.25rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: #0b0f19;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+}
+
+.relatorio-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.relatorio-table thead th {
+  text-align: left;
+  padding: 0.9rem 1.1rem;
+  color: #64748b;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid #1e293b;
+}
+
+.relatorio-table tbody td {
+  padding: 0.9rem 1.1rem;
+  color: #e2e8f0;
+  border-bottom: 1px solid #161e2e;
+}
+
+.relatorio-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.relatorio-table tbody tr:hover {
+  background: #111827;
+}
+
+.col-nome {
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.sla-highlight {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.csat-highlight {
+  color: #facc15;
+  font-weight: 600;
+}
+
+.badge-status {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-status.destaque {
+  background: rgba(139, 92, 246, 0.15);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.badge-status.excelente {
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.badge-status.regular {
+  background: rgba(234, 179, 8, 0.12);
+  color: #facc15;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+@media (max-width: 700px) {
+  .relatorio-header {
+    flex-direction: column;
+  }
+}

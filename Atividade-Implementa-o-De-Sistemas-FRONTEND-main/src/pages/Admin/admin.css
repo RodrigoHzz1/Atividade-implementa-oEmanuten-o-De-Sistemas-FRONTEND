@@ -1,0 +1,260 @@
+.tn-admin-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #050812;
+  color: #f1f5f9;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.tn-admin-main {
+  flex: 1;
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  box-sizing: border-box;
+}
+
+.tn-admin-topbar {
+  margin-bottom: 1.5rem;
+}
+
+.tn-btn-ghost {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid #1e293b;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tn-btn-ghost:hover {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+.tn-admin-header {
+  margin-bottom: 1.75rem;
+}
+
+.tn-admin-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0 0 0.35rem 0;
+}
+
+.tn-admin-header p {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.tn-admin-alert {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+/* KPIs */
+.tn-admin-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.tn-admin-kpi {
+  background: #0b0f19;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tn-admin-kpi span {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.tn-admin-kpi strong {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.cor-azul { color: #3b82f6; }
+.cor-amarelo { color: #eab308; }
+.cor-verde { color: #22c55e; }
+.cor-cinza { color: #94a3b8; }
+
+/* Acesso rápido */
+.tn-admin-quicklink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: #0b0f19;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tn-admin-quicklink h2 {
+  font-size: 1.05rem;
+  color: #f8fafc;
+  margin: 0 0 0.25rem 0;
+}
+
+.tn-admin-quicklink p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+  max-width: 520px;
+}
+
+.tn-btn-primary {
+  background: #8b5cf6;
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.tn-btn-primary:hover {
+  background: #7c3aed;
+}
+
+/* Seções com tabelas */
+.tn-admin-section {
+  margin-bottom: 2.5rem;
+}
+
+.tn-admin-section h2 {
+  font-size: 1.1rem;
+  color: #f8fafc;
+  margin-bottom: 0.9rem;
+}
+
+.tn-admin-loading,
+.tn-admin-empty {
+  color: #94a3b8;
+  text-align: center;
+  padding: 2rem 0;
+  background: #0b0f19;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+}
+
+.tn-admin-table-wrapper {
+  overflow-x: auto;
+  background: #0b0f19;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+}
+
+.tn-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.tn-admin-table thead th {
+  text-align: left;
+  padding: 0.8rem 1rem;
+  color: #64748b;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid #1e293b;
+  white-space: nowrap;
+}
+
+.tn-admin-table tbody td {
+  padding: 0.8rem 1rem;
+  color: #e2e8f0;
+  border-bottom: 1px solid #161e2e;
+}
+
+.tn-admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tn-admin-row-clicavel {
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.tn-admin-row-clicavel:hover {
+  background: #111827;
+}
+
+.tn-admin-obs {
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tn-admin-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tn-admin-badge.status-aberto {
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.tn-admin-badge.status-em_atendimento {
+  background: rgba(234, 179, 8, 0.12);
+  color: #facc15;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.tn-admin-badge.status-argurdando {
+  background: rgba(148, 163, 184, 0.15);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.tn-admin-badge.status-resolvido {
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.tn-admin-badge.status-cancelado {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+@media (max-width: 700px) {
+  .tn-admin-quicklink {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

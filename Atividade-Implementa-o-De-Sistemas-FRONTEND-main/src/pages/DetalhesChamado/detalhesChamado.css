@@ -1,0 +1,58 @@
+.btn-back {
+  background: transparent;
+  border: none;
+  color: #a855f7;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.detail-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ticket-number {
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.detail-header h1 {
+  color: #f8fafc;
+  font-size: 1.5rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  background: #0b0f19;
+  border-radius: 8px;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.detail-description h3 {
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+}
+
+.detail-description p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
