@@ -1,10 +1,9 @@
 import axios from 'axios';
 
 // Instância central de comunicação HTTP com o backend.
-// Todas as chamadas do frontend passam por aqui para padronizar a URL base,
-// cabeçalhos e tratamento de autorização.
+// Utiliza a variável de ambiente se configurada na Vercel, ou cai de fallback no link do Railway.
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8080',
+  baseURL: import.meta.env.VITE_API_URL || 'https://atividade-implementao-de-sistemas-backend-production-3dee.up.railway.app',
   headers: {
     'Content-Type': 'application/json',
   },
