@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import api from '../Services/api';
 
 // Helpers para ler o token e o usuário salvos em localStorage ou sessionStorage.
 const getStoredToken = () => localStorage.getItem('token') || sessionStorage.getItem('token');
@@ -37,8 +38,6 @@ const buscarUsuarioConhecido = (email) => lerDiretorio()[email.toLowerCase()];
 const AuthContext = createContext({});
 
 // Provider que centraliza a autenticação do app.
-// Ele mantém o usuario atual, controla o estado de carregamento e expõe
-// funções para login e logout para toda a árvore de componentes.
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -66,20 +65,12 @@ export const AuthProvider = ({ children }) => {
     carregarSessaoArmazenada();
   }, []);
 
-  // Realiza autenticação na API e salva o usuário em sessão/localStorage.
+  // Realiza autenticação na API do Railway e salva o usuário em sessão/localStorage.
   const login = async (email, senha, lembrarMe = false, tipoAcessoSelecionado = 'funcionario') => {
     try {
-      const response = await fetch('http://localhost:8080/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, senha }),
-      });
-
-      const data = await response.json().catch(() => ({}));
-
-      if (!response.ok) {
-        throw new Error(data?.mensagem || 'Falha na autenticação. Verifique e-mail e senha.');
-      }
+      // Chamada atualizada para utilizar o cliente central com a URL do Railway
+      const response = await api.post('/auth/login', { email, senha });
+      const data = response.data;
 
       const { id, token, perfil: perfilApi, email: emailApi, nome: nomeApi } = data?.dados || {};
 
@@ -116,7 +107,7 @@ export const AuthProvider = ({ children }) => {
       return { success: true, user: userData };
     } catch (error) {
       console.error('Erro no login:', error);
-      const mensagem = error.message || 'Falha na autenticação. Verifique e-mail e senha.';
+      const mensagem = error.response?.data?.mensagem || error.message || 'Falha na autenticação. Verifique e-mail e senha.';
       return { success: false, error: mensagem };
     }
   };
